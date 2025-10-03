@@ -10,15 +10,17 @@
 ## 2. Acceso a datos con DOM y SAX
 
 ### DOM (Document Object Model)
-- Cómo funciona: lee el XML entero y lo carga en memoria como un árbol de nodos (Document).
-- Recorrido: tú decides cómo recorrer ese árbol, por ejemplo con bucles, getElementsByTagName(), etc.
-- Ejemplo mental: es como abrir un libro, fotocopiar todas las páginas y guardarlas en tu mesa; después puedes ir saltando de capítulo a capítulo, volver atrás, modificar frases…
+- **Cómo funciona**: lee el XML entero y lo carga en memoria como un árbol de nodos (Document).
+- **Recorrido**: tú decides cómo recorrer ese árbol, por ejemplo con bucles, getElementsByTagName(), etc.
+- **Ejemplo**: es como abrir un libro, fotocopiar todas las páginas y guardarlas en tu mesa; después puedes ir saltando de capítulo a capítulo, volver atrás, modificar frases…
+
 👉 Entonces, DOM también recorre nodo a nodo, pero en memoria, y no tiene que ser en orden: puedes saltar, volver atrás, modificar.
 
 ### SAX (Simple API for XML)
-- Cómo funciona: no guarda todo el documento. Va leyendo el XML secuencialmente, de arriba a abajo.
-- Cada vez que encuentra algo (inicio de etiqueta, texto, fin de etiqueta…) lanza un evento que tú capturas en tu código, solo mantiene en memoria el nodo actual
-- Ejemplo mental: es como leer un libro en voz alta: avanzas línea a línea y no puedes volver atrás (a menos que lo vuelvas a abrir).
+- **Cómo funciona**: no guarda todo el documento. Va leyendo el XML secuencialmente, de arriba a abajo.
+- **Recorrido**:Cada vez que encuentra algo (inicio de etiqueta, texto, fin de etiqueta…) lanza un evento que tú capturas en tu código, solo mantiene en memoria el nodo actual
+- **Ejemplo**: es como leer un libro en voz alta: avanzas línea a línea y no puedes volver atrás (a menos que lo vuelvas a abrir).
+
 👉 SAX recorre nodo a nodo en orden secuencial, pero no puedes volver atrás ni modificar nada, solo reaccionar al evento.
 
 **Resumen:**
